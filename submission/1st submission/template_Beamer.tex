@@ -1,0 +1,95 @@
+
+
+\documentclass{beamer}
+ \usetheme{Warsaw}
+\usepackage[utf8]{inputenc}
+\title{Face Dtecttion:A Survey}
+\subtitle{IET Ahmedabdad University}
+\author{Himani Bhatt(1421003)\\ Janvi Shah(1421004)\\ Priyanka Nimavat(1421010)\\ Sahil Desai(1421014)}
+\institute{Prof. Mehul Raval\\Prof. Ratnik Gandhi}
+\date{2014}
+ 
+ 
+ 
+\begin{document}
+ 
+\frame{\titlepage}
+ 
+\begin{frame}
+\frametitle{Introduction}
+
+\begin{itemize}
+\item A face detector has to tell whether an image of arbitrary size contains a human face and if so, where it is.
+\item One natural framework for considering this problem is that of binary classification, in which a classifier is constructed to minimize
+the misclassification risk.
+\item The algorithm must minimize both the false negative and false positive rates in order to achieve an acceptable performance.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Techniques}
+
+\begin{itemize}
+\item Finding faces in images with controlled background
+\item Finding faces by color
+\item Finding faces by motion
+\item Using a mixture of the above
+\item Finding faces in unconstrained scenes
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Neural Network Algorithm}
+
+\begin{itemize}
+\item A neural networks based upright frontal face detection system. The retinally connected neural network examined small windows of an image and decided whether each window contained a face. The system arbitrated between multiple networks to improve performance over a single network.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Viola Jones Algorithm}
+
+\begin{itemize}
+\item Haar Features
+\item Integral Image
+\item Adaboost
+\item Cascading
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Conclusion}
+After surveying these methods find some of the drawbacks for above method and we conclude that we try to implement the method of Viola Jones algorithm
+\end{frame}
+
+\begin{frame}
+
+\frametitle{References}
+\begin{thebibliography}{4}
+
+\bibitem{lamport94}
+Face Detection,
+\emph{A Survey Erik Hjelm°as1}.Department of Informatics, University of Oslo,norway.
+
+
+\bibitem{lamport94}
+Detecting Faces in Images,\emph{A Survey Ming-Hsuan Yang, Member, IEEE, David J. Kriegman, Senior Member, IEEE, and Narendra Ahuja, Fellow}.IEEE.
+ 
+\bibitem{lamport94}
+Robust Real-Time Face Detection,
+\emph{PAUL VIOLA}. Microsoft Research, One Microsoft Way, Redmond, WA 98052, USA, July 11, 2003.
+ 
+\bibitem{lamport94}
+Rapid Object Detection using a Boosted Cascade of Simple
+Features,
+\emph{Paul Viola Michael Jones}. Mitsubishi Electric Research Labs Compaq CRL 201 Broadway, 8th FL One Cambridge Center Cambridge, MA 02139 Cambridge, MA 02142.
+  
+\end{thebibliography}
+
+\end{frame}
+
+\end{document}
+

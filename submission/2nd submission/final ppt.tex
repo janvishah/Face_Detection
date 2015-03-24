@@ -1,0 +1,141 @@
+
+\documentclass{beamer}
+
+\usetheme{Szeged}
+
+\title{Face Detection}
+
+% A subtitle is optional and this may be deleted
+\subtitle{A Survey}
+
+\author{Himani Bhatt(1421003) \and Janvi Shah(1421004)\\ \and Priyanka Nimavat(1421010) \and Sahil Desai(1421014}
+
+\institute[IET-Ahmedabad University] % (optional, but mostly needed)
+{
+  Present To:\\
+  Prof.Mehul Raval\\
+  
+  \and
+  Prof.Ratnik Gandhi\\
+  
+  Dhruv Gupta
+  }
+\date{}
+
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+
+% Let's get started
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Introduction}
+  \begin{itemize}
+  \item {
+    A face detector has to tell whether an image of arbitrary size contains a human face and if so, where it is.
+  }
+  \item {
+    One natural framework for considering this problem is that of binary classification, in which a classifier is constructed to minimize the min classification risk.
+  }
+  \item{
+  The algorithm must minimize both the false negative and false positive rates in order to achieve an acceptable performance.
+  }
+  \item{
+  The challenges associated with face detection are:Pose,Presence or absence of structural component,Facial expression,Occlusion,Image orientation,Imaging conditions
+  }
+  \end{itemize}
+\end{frame}
+
+% You can reveal the parts of a slide one at a time
+% with the \pause command:
+\begin{frame}{Methods}
+Face Detection methods can be classified in two approaches
+\begin{itemize}
+\item Featured based Approach
+\item Image Based Approach
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Featured based Approach}
+
+\begin{itemize}
+\item Edges
+\item Gray-Level
+\item Color
+\item Motion
+\item Feature searching
+\item Snakes
+\item Deformable Templates
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Image Based Approach}
+Neural Networks
+
+
+\end{frame}
+
+\begin{frame}[label=main]
+\frametitle{Viola Jones Face Detection Algorithm}
+\begin{itemize}
+\item Haar Features:-Haar features are used to detect the presence of particular feature in the given image. Each features resulting a single value which is calculated by
+subtracting the sum of pixels under white rectangle from the sum of pixel under black rectangle.
+
+\item Integral Image:-Rectangle features can be computed very rapidly using an intermediate representation for the image which we call the integral image.
+
+\item Adaboost:-Adaboost is machine learning algorithm which helps in finding only the best features among all.
+
+\item Cascading:-Images with multiple faces would suffer from multiple false alarming of face detected. Cascading helps to remove non-face sub-windows to increase detection rate.
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{References}
+\begin{thebibliography}{4}
+
+\bibitem{lamport94}
+Face Detection,
+\emph{A Survey Erik Hjelm°as1}.Department of Informatics, University of Oslo,norway.
+
+\bibitem{lamport94}
+Neural Network-Based Face Detection
+\emph{Henry A. Rowley,Henry A. Rowley, Takeo Kanade}. Computer Vision and Pattern Recognition1996.
+
+\bibitem{lamport94}
+Detecting Faces in Images,\emph{A Survey Ming-Hsuan Yang, Member, IEEE, David J. Kriegman, Senior Member, IEEE, and Narendra Ahuja, Fellow}.IEEE.
+ 
+\bibitem{lamport94}
+Robust Real-Time Face Detection,
+\emph{PAUL VIOLA}. Microsoft Research, One Microsoft Way, Redmond, WA 98052, USA, July 11, 2003.
+ 
+\bibitem{lamport94}
+Rapid Object Detection using a Boosted Cascade of Simple
+Features,
+\emph{Paul Viola Michael Jones}. Mitsubishi Electric Research Labs Compaq CRL 201 Broadway, 8th FL One Cambridge Center Cambridge, MA 02139 Cambridge, MA 02142.
+  
+\end{thebibliography}
+
+\end{frame}
+
+% All of the following is optional and typically not needed. 
+
+\end{document}
+
+
