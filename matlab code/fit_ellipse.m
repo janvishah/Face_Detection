@@ -1,5 +1,5 @@
 % Read the Image
-img = imread('C:\Users\Piyu\Documents\MATLAB\Frames\123.jpg');
+img = imread('D:\study\MTech_2nd_sem\frame_images\123.jpg');
 figure(1);
 imshow(img);
 %hist(double(img))

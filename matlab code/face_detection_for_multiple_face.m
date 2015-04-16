@@ -2,7 +2,7 @@ close all;
 clear all;
 clc;
 % Read the Image
-img = imread('D:\study\MTech_2nd_sem\frame_images\39.jpg');
+img = imread('D:\study\MTech_2nd_sem\frame_images\1590.jpg');
 
 [no_of_rows,no_of_cols,dimension] = size(img);
 total_num_of_pixels = no_of_rows * no_of_cols;
@@ -22,30 +22,32 @@ S = zeros(no_of_rows,no_of_cols);
 H = HSV(:,:,1);
 S = HSV(:,:,2);
 
-
-image = ones(no_of_rows,no_of_cols);
+image = zeros(no_of_rows,no_of_cols);
 %image = arrayfun(@condition, cb,cr,H,S);
-image = (cb >= 77 & cb <= 127 & cr >= 133 & cr <= 173 & H > 0 & H <0.2 & S > 0.2 & S<0.7).* 0 + (~(cb >= 77 & cb <= 127 & cr >= 133 & cr <= 173 & H > 0 & H <0.2 & S > 0.2 & S<0.7).* 1);
-figure(4);
-imshow(image);
+image = (cb >= 77 & cb <= 127 & cr >= 133 & cr <= 173 & H > 0 & H <0.2 & S > 0.2 & S<0.7).* 1 + (~(cb >= 77 & cb <= 127 & cr >= 133 & cr <= 173 & H > 0 & H <0.2 & S > 0.2 & S<0.7).* 0);
+
+se = strel('disk',3);
+im = imerode(image,se);
+
+
+ifill = imfill(im);
+
+
 
 labeledimage = bwlabel(image);
+
+
 blobMeasurements = regionprops(labeledimage,'Area');
 allblobareas = [blobMeasurements.Area];
-allowableAreaIndexes = (allblobareas > 150 ) & (allblobareas < 4000);
+allowableAreaIndexes = (allblobareas > 10000 ) & (allblobareas < 50000);
 keeperindexes = find(allowableAreaIndexes);
-
 if (keeperindexes ~= [0])
-    keeperblobsimage = ismember(labeledimage,keeperindexes);
-    originalimage = bwareaopen(keeperblobsimage,500);
-
-    se = strel('disk',10);
-    closbw = imclose(originalimage,se);
-
-    mm = double(closbw);
-    figure(9);
+keeperblobsimage = ismember(labeledimage,keeperindexes);
+    originalimage = bwareaopen(keeperblobsimage,1000);
+    
+    figure(1);
     imshow(img);
-    s = regionprops(mm,'BoundingBox');
+    s = regionprops(originalimage,'BoundingBox');
 
     hold on
     for k = 1 : length(s)

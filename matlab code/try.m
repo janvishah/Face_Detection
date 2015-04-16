@@ -2,7 +2,7 @@ close all;
 clear all;
 clc;
 % Read the Image
-img = imread('D:\study\MTech_2nd_sem\frame_images\39.jpg');
+img = imread('D:\study\MTech_2nd_sem\frame_images\1963.jpg');
 
 [no_of_rows,no_of_cols,dimension] = size(img);
 total_num_of_pixels = no_of_rows * no_of_cols;
